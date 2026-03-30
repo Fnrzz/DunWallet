@@ -3,7 +3,6 @@ import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "@/src/styles/globals.css";
 import { cn } from "@/src/lib/helpers/cn";
 import LinePatern from "@/src/components/layout/line-patern";
-import SplashScreen from "@/src/components/layout/splash-screen";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -45,13 +44,11 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex justify-center relative">
-        <SplashScreen>
-          <LinePatern />
-          <main className="w-full md:max-w-sm px-8 shadow-lg overflow-x-hidden relative z-0">
-            {children}
-            <Toaster />
-          </main>
-        </SplashScreen>
+        <LinePatern />
+        <main className="w-full md:max-w-sm px-8 shadow-lg overflow-x-hidden relative z-0">
+          {children}
+          <Toaster />
+        </main>
       </body>
     </html>
   );
